@@ -482,7 +482,7 @@ bool getPath(const TreeNode* root, const TreeNode* p, deque<const TreeNode*>& pa
         return true;
 
     bool found = false;
-    auto i = root->children.begin();            // 顺序遍历每个子节点
+    auto i = root->children.begin();            // 迭代器顺序遍历每个子节点
     while (!found && i < root->children.end()) {
         found = GetNodePath(*i, p, path);
         ++i;
